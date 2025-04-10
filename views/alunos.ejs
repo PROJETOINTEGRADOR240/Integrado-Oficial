@@ -45,15 +45,29 @@
     </select>
 
     <input type="Text" name="genero" id="genero" placeholder="Gênero">
-  
-    <select name="cor" id="cor" required>
-      <option value="">Cor</option>
-      <option value="Branco">Branco </option>
-      <option value="Preto">Preto </option>
-      <option value="Pardo">Pardo </option>
-      <option value="Amarelo">Amarelo </option>
-      <option value="Indigena">Indígena </option>
-    </select>
+    <div style="display: flex; gap: 10px; align-items: center;">
+      <!-- Campo Cor -->
+      <div>
+        <label for="cor">Cor</label><br>
+        <select id="cor" name="cor">
+          <option value="">Selecione</option>
+          <option value="branca">Branca</option>
+          <option value="preta">Preta</option>
+          <option value="parda">Parda</option>
+          <option value="amarela">Amarela</option>
+          <option value="indigena">Indígena</option>
+        </select>
+      </div>
+    
+      <!-- Campo PCD -->
+      <div style="display: flex; align-items: center; gap: 5px; margin-top: 20px;">
+        <label>PCD:</label>
+        <input type="radio" id="pcdSim" name="pcd" value="sim">
+        <label for="pcdSim">Sim</label>
+        <input type="radio" id="pcdNao" name="pcd" value="nao" checked>
+        <label for="pcdNao">Não</label>
+      </div>
+    </div>    
   </div>
   <div class="form-group">
     <input type="text" name="nome_resp" placeholder="Nome do Responsável">
@@ -143,26 +157,24 @@
              <label>Email</label>
              <input type="email" id="edit-email" name="email" class="form-control">
             </div>
-            <div class="form-group">
-              <label>Nascimento</label>
-              <input type="date" id="edit-data_nasc" name="data_nasc" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label>Idade</label>
-              <input type="number" id="edit-idade" name="idade" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label>Sexo</label>
-              <input type="text" id="edit-sexo" name="sexo" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label>Gênero</label>
-              <input type="text" id="edit-genero" name="genero" class="form-control">
-            </div>
-            <div class="form-group">
-              <label>Cor</label>
-              <input type="text" id="edit-cor" name="cor" class="form-control" required>
-            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <label>Nascimento</label>
+                <input type="date" id="edit-data_nasc" name="data_nasc" class="form-control" required>
+              </div>
+              <div class="col-md-1">
+                <label>Idade</label>
+                <input type="number" id="edit-idade" name="idade" class="form-control" required>
+              </div>
+              <div class="col-md-3">
+                <label>Sexo</label>
+                <input type="text" id="edit-sexo" name="sexo" class="form-control" required>
+              </div>
+              <div class="col-md-2">
+                <label>Gênero</label>
+                <input type="text" id="edit-genero" name="genero" class="form-control">
+              </div>
+            </div>            
             <div class="form-group">
               <label>CPF Responsável</label>
               <input type="text" id="edit-cpf_cnpj_resp" name="cpf_cnpj_resp" class="form-control">
