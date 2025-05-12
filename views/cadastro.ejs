@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Cadastro de Salas e Sensores</title>
+</head>
+<body>
+    <h2>Cadastrar Sala</h2>
+    <form action="/monitoramento/cadastro/sala" method="POST">
+        <input type="text" name="nome" placeholder="Nome da Sala" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <h2>Cadastrar Sensor</h2>
+    <form action="/monitoramento/cadastro/sensor" method="POST">
+        <input type="text" name="descricao" placeholder="Descrição do Sensor" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>

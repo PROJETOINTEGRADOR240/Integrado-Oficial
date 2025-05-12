@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Monitoramento da Qualidade do Ar</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h2>Monitoramento da Qualidade do Ar</h2>
+    <canvas id="grafico"></canvas>
+
+    <script>
+        async function carregarDados() {
+            const response = await fetch('/monitoramento/dados');
+            const dados = await response.json();
+            
+            const labels = dados.map(d => d.data_hora);
+            const valores = dados.map(d => d.qualidade_ar);
+
+            const ctx = document.getElementById('grafico').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels,
+                    datasets: [{
+                        label: 'Qualidade do Ar',
+                        data: valores,
+                        borderColor: 'blue',
+                        fill: false
+                    }]
+                }
+            });
+        }
+
+        carregarDados();
+    </script>
+</body>
+</html>
