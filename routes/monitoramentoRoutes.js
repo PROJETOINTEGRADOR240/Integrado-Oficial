@@ -43,6 +43,7 @@ router.get('/monitoramento/excluiMaiorqueDez', async (req, res) => {
             )
         `);
         res.status(200).json({ mensagem: 'Registros excedentes excluídos com sucesso' });
+
     } catch (error) {
         console.error('Erro ao excluir registros excedentes:', error);
         res.status(500).json({ erro: 'Erro ao excluir registros excedentes' });

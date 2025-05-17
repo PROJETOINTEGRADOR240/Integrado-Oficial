@@ -29,36 +29,24 @@
      background-position: center;
  }
  
- .wrapper {
-     margin: 2%;
- }
- 
 .rodape-container {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    display: flex;
-    align-items: center;
     padding: 6px 12px;
-    gap: 12px;
     z-index: 9999;
     box-sizing: border-box;
     background: none; /* importante: rodapé transparente */
-}
+    display: flex;
+    align-items: center;
+    gap: 0px; /* Espaço entre logo e texto */
 
-.logo-rodape-livre {
-    height: 73px;
-    background: none;
-    box-shadow: none;
-    filter: none;
-    mix-blend-mode: multiply;
 }
 
 .footer-creditos {
     background: none;
     color: #000000;
-    /*color: white;*/
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     font-size: 13px;
     font-style: italic;
@@ -69,7 +57,16 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
 }
+
+.logo {
+    height: 73px; /* ajuste conforme o tamanho do logo */
+}
+ 
+ .wrapper {
+     margin: 2%;
+ }
 
  .wrapper  {
      width: 420px;
